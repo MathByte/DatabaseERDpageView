@@ -54,6 +54,7 @@ public class GeoAreaServlet extends HttpServlet {
 
     private void listGeoAreas(HttpServletRequest req, HttpServletResponse resp)
             throws SQLException, ServletException, IOException {
+
         List<GeoGraphicArea> allData = DBUtil.getAllDatas();
 
         List<GeoGraphicArea> level0 = new ArrayList<GeoGraphicArea>();

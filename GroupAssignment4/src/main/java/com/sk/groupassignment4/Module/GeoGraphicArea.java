@@ -1,5 +1,10 @@
 package com.sk.groupassignment4.Module;
 
+
+
+
+
+
 public class GeoGraphicArea {
 
     private int geoGraphicAreaId;
