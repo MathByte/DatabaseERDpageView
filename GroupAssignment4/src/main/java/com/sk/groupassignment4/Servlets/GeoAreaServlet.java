@@ -46,9 +46,6 @@ public class GeoAreaServlet extends HttpServlet {
         }
 
 
-
-
-
     }
 
 
@@ -93,12 +90,14 @@ public class GeoAreaServlet extends HttpServlet {
             throws SQLException, ServletException, IOException {
         int id = Integer.parseInt(request.getParameter("id"));
         GeoGraphicArea singleData = DBUtil.getsingleDatas(id);
+        int  total_ = DBUtil.getTotalPopulation(id);
 
         request.setAttribute("id", singleData.getGeoGraphicAreaId());
         request.setAttribute("name", singleData.getName());
         request.setAttribute("code", singleData.getCode());
         request.setAttribute("level", singleData.getLevel());
         request.setAttribute("altercode", singleData.getAlternativeCode());
+        request.setAttribute("totalp", total_);
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("Detail.jsp");
         dispatcher.forward(request, response);

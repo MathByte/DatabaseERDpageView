@@ -10,6 +10,36 @@ public class DBUtil {
 
 
 
+
+
+    public static int getTotalPopulation(int id) {
+        String CHECK_geoArea_SQL = "select age.combined from age where age.censusYear = 1 and age.ageGroup = 1 and age.geographicArea = " + String.valueOf(id);
+        int tot = 0;
+
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+        } catch (ClassNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        // Get Connection
+        try (Connection connection = DriverManager.getConnection("jdbc:mysql://localhost:3306/Census", "root", "admin123");
+             Statement stmt  = connection.createStatement();) {
+            ResultSet rs = stmt.executeQuery(CHECK_geoArea_SQL);
+            while(rs.next()){
+
+                tot = rs.getInt(1);
+
+
+            }
+
+
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+
+        return tot;
+    }
+
     public static GeoGraphicArea getsingleDatas(int id) {
         String CHECK_geoArea_SQL = "SELECT * FROM GEOGRAPHICAREA where geographicAreaID = " + String.valueOf(id);
         GeoGraphicArea gArea = new GeoGraphicArea();

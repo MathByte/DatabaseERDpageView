@@ -34,7 +34,7 @@
             <div class="row">
 
                 <h2>Details</h2>
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <div class="card mb-4 box-shadow">
 
                         <div class="card-body">
@@ -69,6 +69,11 @@
                                     <tr>
                                         <th scope="row">Alternative Code :</th>
                                         <td >${altercode}</td>
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Total population M+F:</th>
+                                        <td >${totalp}</td>
 
                                     </tr>
                                     </tbody>
