@@ -1,65 +1,19 @@
-<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" %>
-<!DOCTYPE html>
+<%--
+  Created by IntelliJ IDEA.
+  User: khach
+  Date: 2/27/2023
+  Time: 9:30 PM
+  To change this template use File | Settings | File Templates.
+--%>
+<%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
-    <title><GeoGraphicArea></title>
-
+    <title>Title</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 </head>
 <body>
-
-
-<main role="main">
-
-
-    <section class="jumbotron text-center">
-        <div class="container">
-            <h1 class="jumbotron-heading">Welcome to GeoGraphic Areas</h1>
-
-        </div>
-    </section>
-
-    <div class="album py-5 bg-light">
-        <div class="container">
-
-            <div class="row">
-
-
-                <div class="col-md-6">
-                    <div class="card mb-4 box-shadow">
-
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href="GeoAreaServlet"><h2 class="card-img-top">Geographic Area Classification List</h2></a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card mb-4 box-shadow">
-
-                        <div class="card-body">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <a href=""> <h2 class="card-img-top">Age List </h2></a>
-
-
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-        </div>
-    </div>
-
-</main>
-
-
-<br/>
 
 
 
