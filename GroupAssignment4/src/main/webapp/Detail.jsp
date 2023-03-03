@@ -34,7 +34,7 @@
             <div class="row">
 
                 <h2>Details</h2>
-                <div class="col-md-5">
+                <div class="col-md-6">
                     <div class="card mb-4 box-shadow">
 
                         <div class="card-body">
@@ -83,7 +83,7 @@
 
 
                             </div>
-                            <a href="GeoAreaServlet">Go back</a>
+                            <a href="../geoAreaServlet">Go back</a>
                         </div>
                     </div>
                 </div>

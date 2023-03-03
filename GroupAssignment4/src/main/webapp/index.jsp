@@ -32,7 +32,7 @@
 
                         <div class="card-body">
                             <div class="d-flex justify-content-between align-items-center">
-                                <a href="GeoAreaServlet"><h2 class="card-img-top">Geographic Area Classification List</h2></a>
+                                <a href="geoAreaServlet"><h2 class="card-img-top">Geographic Area Classification List</h2></a>
 
 
                             </div>

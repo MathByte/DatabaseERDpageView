@@ -16,7 +16,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 //GeoAreaServlet
-@WebServlet(name = "GeoAreaServlet", value = "/")
+@WebServlet(name = "GeoAreaServlet", value = "/geoAreaServlet")
 public class GeoAreaServlet extends HttpServlet {
 
 
@@ -24,36 +24,9 @@ public class GeoAreaServlet extends HttpServlet {
 
 
 
-
+    @Override
     protected void doGet(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.doGet(req, resp);
-
-        String action = req.getServletPath();
-
-        try {
-            switch (action) {
-
-                case "/detail":
-                    showDetailsForm(req, resp);
-                    break;
-
-                default:
-                    listGeoAreas(req, resp);
-                    break;
-            }
-        } catch (SQLException ex) {
-            throw new ServletException(ex);
-        }
-
-
-    }
-
-
-
-
-
-    private void listGeoAreas(HttpServletRequest req, HttpServletResponse resp)
-            throws SQLException, ServletException, IOException {
 
         List<GeoGraphicArea> allData = DBUtil.getAllDatas();
 
@@ -85,23 +58,6 @@ public class GeoAreaServlet extends HttpServlet {
 
         req.getRequestDispatcher("GeoArea.jsp").forward(req, resp);
 
-    }
-
-    private void showDetailsForm(HttpServletRequest request, HttpServletResponse response)
-            throws SQLException, ServletException, IOException {
-        int id = Integer.parseInt(request.getParameter("id"));
-        GeoGraphicArea singleData = DBUtil.getsingleDatas(id);
-        int  total_ = DBUtil.getTotalPopulation(id);
-
-        request.setAttribute("id", singleData.getGeoGraphicAreaId());
-        request.setAttribute("name", singleData.getName());
-        request.setAttribute("code", singleData.getCode());
-        request.setAttribute("level", singleData.getLevel());
-        request.setAttribute("altercode", singleData.getAlternativeCode());
-        request.setAttribute("totalp", total_);
-
-        RequestDispatcher dispatcher = request.getRequestDispatcher("Detail.jsp");
-        dispatcher.forward(request, response);
 
     }
 
@@ -110,17 +66,7 @@ public class GeoAreaServlet extends HttpServlet {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
+    @Override
     protected void doPost(HttpServletRequest req, HttpServletResponse resp) throws ServletException, IOException {
         //super.doPost(req, resp);
 

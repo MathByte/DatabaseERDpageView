@@ -72,7 +72,7 @@
         <div class="container">
 
             <div class="row">
-
+                <a href=index.jsp>Home Page</a>
                 <h2>list the names of all geographic areas that belong to that hierarchy level.</h2>
                 <div class="col-md-3">
                     <div class="card mb-4 box-shadow">
@@ -88,7 +88,7 @@
                                         %>
                                         <tr>
                                         <%--<td><a href=GeoAreaServlet/edit?id=+<%=gItem0.getGeoGraphicAreaId()%> > <%=gItem0.getName()%></a></td>--%>
-                                            <td><a href=detail?id=<%=gItem0.getGeoGraphicAreaId()%>> <%=gItem0.getName()%></a></td>
+                                            <td><a href=geoAreaServlet/detail?id=<%=gItem0.getGeoGraphicAreaId()%>> <%=gItem0.getName()%></a></td>
                                         </tr>
 
                                      <%  }  %>
@@ -115,7 +115,7 @@
                                         for(GeoGraphicArea gItem1 : g1){
                                     %>
                                     <tr>
-                                        <td><a href=detail?id=<%=gItem1.getGeoGraphicAreaId()%>> <%=gItem1.getName()%></a></td>
+                                        <td><a href=geoAreaServlet/detail?id=<%=gItem1.getGeoGraphicAreaId()%>> <%=gItem1.getName()%></a></td>
                                     </tr>
 
                                     <%  }  %>
@@ -142,7 +142,7 @@
                                         for(GeoGraphicArea gItem2 : g2){
                                     %>
                                     <tr>
-                                        <td><a href=detail?id=<%=gItem2.getGeoGraphicAreaId()%>> <%=gItem2.getName()%></a></td>
+                                        <td><a href=geoAreaServlet/detail?id=<%=gItem2.getGeoGraphicAreaId()%>> <%=gItem2.getName()%></a></td>
                                     </tr>
 
                                     <%  }  %>
@@ -169,7 +169,7 @@
                                         for(GeoGraphicArea gItem3: g3){
                                     %>
                                     <tr>
-                                        <td><a href=detail?id=<%=gItem3.getGeoGraphicAreaId()%>> <%=gItem3.getName()%></a></td>
+                                        <td><a href=geoAreaServlet/detail?id=<%=gItem3.getGeoGraphicAreaId()%>> <%=gItem3.getName()%></a></td>
                                     </tr>
 
                                     <%  }  %>
