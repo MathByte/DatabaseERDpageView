@@ -1,4 +1,5 @@
-<%--
+<%@ page import="java.util.List" %>
+<%@ page import="com.sk.groupassignment4.Beans.Ages" %><%--
   Created by IntelliJ IDEA.
   User: khach
   Date: 2/27/2023
@@ -14,6 +15,116 @@
 
 </head>
 <body>
+
+<jsp:useBean id="myBean" class="com.sk.groupassignment4.Beans.Ages" />
+
+
+<main role="main">
+
+
+    <section class="jumbotron text-center">
+        <div class="container">
+            <h1 class="jumbotron-heading">GeoGraphic Areas</h1>
+
+        </div>
+    </section>
+
+    <div class="album py-5 bg-light">
+        <div class="container">
+
+            <div class="row">
+                <a href=index.jsp>Home Page</a>
+                <h2>Displayed ages for 2016 nad 2021.</h2>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <h2 class="card-img-top"> 2016 </h2>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <% Ages rows = myBean.getAllAges2016();%>
+                                <table class="table table-borderless">
+
+
+                                    <tbody>
+                                    <tr>
+                                        <th scope="row">Ages Combined :</th>
+                                        <td><%=rows.getCombined() %></td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ages Males only :</th>
+                                        <td><%=rows.getMale() %></td>
+
+
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Ages Females only :</th>
+                                        <td><%=rows.getFemale() %></td>
+
+
+                                    </tr>
+                                    </tbody>
+
+
+                                </table>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4 box-shadow">
+                        <h2 class="card-img-top"> 2021 </h2>
+                        <div class="card-body">
+                            <div class="d-flex justify-content-between align-items-center">
+                                <% Ages rows2 = myBean.getAllAges2021();%>
+                                <table class="table table-borderless">
+                                <tbody>
+                                <tr>
+                                    <th scope="row">Ages Combined :</th>
+                                    <td><%=rows2.getCombined() %></td>
+
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ages Males only :</th>
+                                    <td><%=rows2.getMale() %></td>
+
+
+                                </tr>
+                                <tr>
+                                    <th scope="row">Ages Females only :</th>
+                                    <td><%=rows2.getFemale() %></td>
+
+
+                                </tr>
+                                </tbody>
+
+
+                                </table>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
 
 
 

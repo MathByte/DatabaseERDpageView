@@ -1,7 +1,7 @@
 package com.sk.groupassignment4.Servlets;
 
 import com.sk.groupassignment4.DataBaseConnection.DBUtil;
-import com.sk.groupassignment4.Module.GeoGraphicArea;
+import com.sk.groupassignment4.Beans.GeoGraphicArea;
 import jakarta.servlet.*;
 import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;

@@ -1,4 +1,4 @@
-package com.sk.groupassignment4.Module;
+package com.sk.groupassignment4.Beans;
 
 
 

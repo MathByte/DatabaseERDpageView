@@ -1,7 +1,6 @@
 package com.sk.groupassignment4.Servlets;
 
-import com.sk.groupassignment4.Module.GeoGraphicArea;
-import jakarta.servlet.RequestDispatcher;
+import com.sk.groupassignment4.Beans.GeoGraphicArea;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -9,11 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import com.sk.groupassignment4.DataBaseConnection.DBUtil;
 import java.io.IOException;
-import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 //GeoAreaServlet
 @WebServlet(name = "GeoAreaServlet", value = "/geoAreaServlet")

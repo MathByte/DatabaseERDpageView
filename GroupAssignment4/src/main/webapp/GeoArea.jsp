@@ -1,4 +1,4 @@
-<%@ page import="com.sk.groupassignment4.Module.GeoGraphicArea" %>
+<%@ page import="com.sk.groupassignment4.Beans.GeoGraphicArea" %>
 <%@ page import="java.util.ArrayList" %><%--
   Created by IntelliJ IDEA.
   User: khach
